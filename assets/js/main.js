@@ -19,10 +19,11 @@ var valuta = '€';
 if (anni <= under ){
     console.log(kmDaPerc * scontoUnder);
     document.getElementById('prezzo').innerHTML = kmDaPerc * scontoUnder + ' ' + valuta;
+    document.getElementById('sconto').innerHTML ='Il prezzo da pagare è (sconto giovani -20%)';
 }else if (anni > over){
     console.log(kmDaPerc * scontoOver);
     document.getElementById('prezzo').innerHTML = kmDaPerc * scontoOver + ' ' + valuta;
-
+    document.getElementById('sconto').innerHTML ='Il prezzo da pagare è (sconto anziani -40%)';
 }else{
     console.log(kmDaPerc * prezzoKm);
     document.getElementById('prezzo').innerHTML = kmDaPerc * prezzoKm + ' ' + valuta;
