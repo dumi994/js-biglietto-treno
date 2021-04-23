@@ -7,14 +7,29 @@ document.getElementById('posto').innerHTML = kmDaPerc;
 var anni = parseInt(prompt('Quanti anni avete?'))
 console.log(anni);
 document.getElementById('eta').innerHTML = anni;
+var under = 18;
+var over = 65;
+/* var scontoUnder = 0.21 - (0.21 * 20 / 100);
+var scontoOver = 0.21 - (0.21 * 40 / 100); */
+var scontoUnder = 0.17;
+var scontoOver = 0.13;
 
+
+if (anni <= under ){
+    console.log(kmDaPerc * scontoUnder);
+    document.getElementById('prezzo').innerHTML = kmDaPerc * scontoUnder ' ' + valuta;
+}else if (anni >= under){
+    console.log(prezzoKm * kmDaPerc);
+}else if (anni >= over){
+    console.log(kmDaPerc * scontoOver);
+}
 
 
 //||||||||||||||||||||||||||||||
 var prezzoKm = 0.21;
 var valuta = '€';
-console.log(prezzoKm * kmDaPerc);
-document.getElementById('prezzo').innerHTML = prezzoKm * kmDaPerc + ' ' + valuta;
-/* var kmPercorsi = domanda * */
+
+/* document.getElementById('prezzo').innerHTML = prezzoKm * kmDaPerc + ' ' + valuta; */
+
 
 
