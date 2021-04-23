@@ -9,27 +9,24 @@ console.log(anni);
 document.getElementById('eta').innerHTML = anni;
 var under = 18;
 var over = 65;
-/* var scontoUnder = 0.21 - (0.21 * 20 / 100);
-var scontoOver = 0.21 - (0.21 * 40 / 100); */
+//Sconto
 var scontoUnder = 0.17;
 var scontoOver = 0.13;
-
+//Prezzo al km
+var prezzoKm = 0.21;
+var valuta = '€';
 
 if (anni <= under ){
     console.log(kmDaPerc * scontoUnder);
-    document.getElementById('prezzo').innerHTML = kmDaPerc * scontoUnder ' ' + valuta;
-}else if (anni >= under){
-    console.log(prezzoKm * kmDaPerc);
-}else if (anni >= over){
+    document.getElementById('prezzo').innerHTML = kmDaPerc * scontoUnder + ' ' + valuta;
+}else if (anni > over){
     console.log(kmDaPerc * scontoOver);
+    document.getElementById('prezzo').innerHTML = kmDaPerc * scontoOver + ' ' + valuta;
+
+}else{
+    console.log(kmDaPerc * prezzoKm);
+    document.getElementById('prezzo').innerHTML = kmDaPerc * prezzoKm + ' ' + valuta;
 }
 
 
 //||||||||||||||||||||||||||||||
-var prezzoKm = 0.21;
-var valuta = '€';
-
-/* document.getElementById('prezzo').innerHTML = prezzoKm * kmDaPerc + ' ' + valuta; */
-
-
-
